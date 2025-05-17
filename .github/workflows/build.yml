@@ -1,7 +1,9 @@
 name: Build package
 
 on:
-  push: [main]
+  push: 
+    branches: 
+      - main
 
 permissions:
   contents: read
