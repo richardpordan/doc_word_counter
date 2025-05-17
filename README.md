@@ -1,4 +1,4 @@
-# ipynb_word_counter
+# doc_word_counter
 
 [![QA and test](https://github.com/richardpordan/doc_word_counter/actions/workflows/qa.yml/badge.svg?branch=main)](https://github.com/richardpordan/doc_word_counter/actions/workflows/qa.yml)
 [![Build package](https://github.com/richardpordan/doc_word_counter/actions/workflows/build.yml/badge.svg)](https://github.com/richardpordan/doc_word_counter/actions/workflows/build.yml)
