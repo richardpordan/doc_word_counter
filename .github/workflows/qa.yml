@@ -32,8 +32,8 @@ jobs:
       - name: Run Ruff
         run: uv run ruff check
 
-      - name: Mock run
-        run: uv run test/mock_run.py
+      - name: Run tests
+        run: uv run python -m unittest -v test/tests.TestWordCounter
 
       # - name: Test with pytest
       #   run: pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
