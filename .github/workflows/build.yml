@@ -1,6 +1,6 @@
 name: Build dist
 
-on: [workflow_dispath]
+on: [workflow_dispatch]
 
 permissions:
   contents: read
