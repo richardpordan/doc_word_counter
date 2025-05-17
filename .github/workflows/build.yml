@@ -1,9 +1,6 @@
 name: Build package
 
-on:
-  push: 
-    branches: 
-      - main
+on: [workflow_dispath]
 
 permissions:
   contents: read
@@ -24,13 +21,9 @@ jobs:
 
       - name: Setup Python 
         uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
 
       - name: Install uv and set the python version
         uses: astral-sh/setup-uv@v5
-        with:
-          python-version: ${{ matrix.python-version }}
         
       - name: Install the project
         run: uv sync --locked --all-extras --dev
