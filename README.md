@@ -1,5 +1,7 @@
 # ipynb_word_counter
 
+[![QA and test](https://github.com/richardpordan/doc_word_counter/actions/workflows/qa.yml/badge.svg?branch=main)](https://github.com/richardpordan/doc_word_counter/actions/workflows/qa.yml)
+
 Word counter for assignments in `.ipynb` or `.md` formats. 
 
 For personal use and not in active development.
