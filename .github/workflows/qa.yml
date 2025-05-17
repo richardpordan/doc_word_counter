@@ -1,12 +1,12 @@
 name: QA and test
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_call]
 
 permissions:
   contents: read
 
 jobs:
-  test:
+  qa:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,11 +21,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Setup uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-          uv self update
-          uv sync
+      - name: Install uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+        
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev
       
       - name: Run Ruff
         run: uv run ruff check
