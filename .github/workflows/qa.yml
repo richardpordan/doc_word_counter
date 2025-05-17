@@ -33,7 +33,7 @@ jobs:
         run: uv run ruff check
 
       - name: Run tests
-        run: uv run python -m unittest -v test/tests.TestWordCounter
+        run: uv run python -m unittest -v tests
 
       # - name: Test with pytest
       #   run: pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
