@@ -1,4 +1,4 @@
-name: Build package
+name: Build dist
 
 on: [workflow_dispath]
 
