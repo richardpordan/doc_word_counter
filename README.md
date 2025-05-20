@@ -17,3 +17,9 @@ In ipynb, only reads markdown cells. In both MD and ipynb, the following aren't 
 - latex equations (either inline or newline)
 - md headers 
 - "references" header and everything that comes after
+
+## Use
+
+```
+uv run --with git+https://github.com/richardpordan/doc_word_counter.git <filename> <target [optional]>
+```
