@@ -21,5 +21,5 @@ In ipynb, only reads markdown cells. In both MD and ipynb, the following aren't 
 ## Use
 
 ```
-uv run --with git+https://github.com/richardpordan/doc_word_counter.git <filename> <target [optional]>
+uv run --with git+https://github.com/richardpordan/doc_word_counter.git python -m wordcounter <filename> <target [optional]>
 ```
