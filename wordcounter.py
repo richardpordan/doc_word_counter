@@ -66,10 +66,10 @@ class WordCounter():
         # Turn new lines into spaces (for good reason)
         doc = re.sub(r"\n", " ", doc)
         # Remove supported html includding inner
-        doc = re.sub(r"(<table(.*(>).*)</table>)", "", doc)
+        doc = re.sub(r"(<table(.*(>)[^>]*)</table>)", "", doc)
         doc = re.sub(r"<img[^>]*>", "", doc)
-        doc = re.sub(r"(<p(.*(>).*)</p>)", "", doc)
-        doc = re.sub(r"(<div(.*(>).*)</div>)", "", doc)
+        doc = re.sub(r"(<p(.*(>)[^>]*)</p>)", "", doc)
+        doc = re.sub(r"(<div(.*(>)[^>]*)</div>)", "", doc)
         # Remove anything after and including references md heading
         doc = re.sub(r"([#]{2,5}\s{0,2}References).*", "", doc)
         doc = re.sub(r"[#]{1,5}\s?\w*(?=\s)", "", doc)
